@@ -127,29 +127,12 @@ li + li {
   overflow-wrap: anywhere;
 }
 
-.link-placeholders {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
-  margin-top: 18px;
-}
-
-.link-placeholders p {
-  margin: 0;
-  padding: 12px 14px;
-  color: var(--muted);
-  background: #ffffff;
-  border: 1px solid var(--border);
-  border-radius: 6px;
-}
-
 @media (max-width: 640px) {
   .page {
     padding: 32px 18px 40px;
   }
 
-  .profile-meta,
-  .link-placeholders {
+  .profile-meta {
     grid-template-columns: 1fr;
   }
 
