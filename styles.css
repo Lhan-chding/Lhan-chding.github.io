@@ -1,0 +1,163 @@
+:root {
+  --background: #f7f8fa;
+  --text: #1f2933;
+  --muted: #52616b;
+  --border: #d8dee6;
+  --accent: #2f5d7c;
+  --accent-light: #edf3f7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--background);
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  background: var(--background);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+a {
+  color: var(--accent);
+}
+
+a:focus,
+a:hover {
+  color: #244963;
+}
+
+.page {
+  width: min(100%, 900px);
+  margin: 0 auto;
+  padding: 48px 24px 56px;
+}
+
+.hero {
+  padding: 16px 0 34px;
+  border-bottom: 1px solid var(--border);
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: var(--accent);
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+h1,
+h2 {
+  margin: 0;
+  line-height: 1.2;
+  letter-spacing: 0;
+}
+
+h1 {
+  color: var(--text);
+  font-size: clamp(2.1rem, 6vw, 3.4rem);
+  font-weight: 750;
+}
+
+h2 {
+  color: var(--text);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+p {
+  margin: 12px 0 0;
+}
+
+section {
+  padding: 28px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+ul {
+  margin: 14px 0 0;
+  padding-left: 1.25rem;
+}
+
+li + li {
+  margin-top: 8px;
+}
+
+.profile-meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 24px;
+  margin: 24px 0 0;
+}
+
+.profile-meta div {
+  min-width: 0;
+  padding: 14px 16px;
+  background: var(--accent-light);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+.profile-meta dt {
+  margin: 0 0 2px;
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.profile-meta dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.intro {
+  max-width: 760px;
+  margin-top: 24px;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.detail-line,
+.contact-line {
+  overflow-wrap: anywhere;
+}
+
+.link-placeholders {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.link-placeholders p {
+  margin: 0;
+  padding: 12px 14px;
+  color: var(--muted);
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+@media (max-width: 640px) {
+  .page {
+    padding: 32px 18px 40px;
+  }
+
+  .profile-meta,
+  .link-placeholders {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding-bottom: 28px;
+  }
+
+  section {
+    padding: 24px 0;
+  }
+}
